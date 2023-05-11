@@ -25,7 +25,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (argc != 3)
+    if (argc != 3 && argc != 4)
     {
         fprintf(stderr, "usage: %s <server-ip> <port>",argv[0]);
         return EXIT_FAILURE;
@@ -60,8 +60,16 @@ int main(int argc, char* argv[])
     }
         
     char msg[BUF_SIZE]; 
-    fgets(msg, BUF_SIZE, stdin);
-    
+	if (argc == 3)
+	{
+    	fgets(msg, BUF_SIZE, stdin);
+    }
+	else if (argc == 4)
+	{
+		FILE* myfile = fopen(argv[3], "r");
+		fread(msg, 1, BUF_SIZE, myfile);
+	}
+
     int bytes_received;
     fprintf(stdout, "Sending %s", msg);
     send(sock, msg , strlen(msg), 0);
