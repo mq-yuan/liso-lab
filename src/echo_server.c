@@ -106,6 +106,7 @@ int main(int argc, char* argv[])
 				size_t n = ( sizeof(buf) > strlen(reply)+1 ) ? strlen(reply)+1 : sizeof(buf) ;
 				strncpy(buf, reply, n);
 				buf[n-1] = '\0';
+				readret = strlen(buf);
 			}
 			else if ( (strncmp(request->http_method, "GET", 4)!=0) && 
 					  (strncmp(request->http_method, "POST", 5)!=0) &&
@@ -116,6 +117,7 @@ int main(int argc, char* argv[])
 				size_t n = ( sizeof(buf) > strlen(reply)+1 ) ? strlen(reply)+1 : sizeof(buf) ;
 				strncpy(buf, reply, n);
 				buf[n-1] = '\0';
+				readret = strlen(buf);
 			}
 
             if (send(client_sock, buf, readret, 0) != readret)
