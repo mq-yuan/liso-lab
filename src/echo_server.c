@@ -18,10 +18,13 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <signal.h>
 #include "parse.h"
 
 #define ECHO_PORT 9999
 #define BUF_SIZE 4096
+
+int sock, client_sock;
 
 int close_socket(int sock)
 {
@@ -33,9 +36,15 @@ int close_socket(int sock)
     return 0;
 }
 
+void signal_handler(int signum)
+{
+	close_socket(sock);
+	exit(signum);
+}
+
 int main(int argc, char* argv[])
 {
-    int sock, client_sock, echo_port;
+    int echo_port;
     ssize_t readret;
     socklen_t cli_size;
     struct sockaddr_in addr, cli_addr;
@@ -49,6 +58,7 @@ int main(int argc, char* argv[])
 	{
 		echo_port = ECHO_PORT;
 	}
+	signal(SIGINT, signal_handler);
 
     fprintf(stdout, "----- Echo Server -----\n");
     
