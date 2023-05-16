@@ -109,6 +109,7 @@ int main(int argc, char* argv[])
 			Request *request = parse(buf, BUF_SIZE, client_sock);
 
 			/* Generating the Response Messages for Unimplemented and Formatting Errors*/
+			/* For NULL */
 			if (request == NULL)
 			{
 				memset(buf, 0, BUF_SIZE);
@@ -118,6 +119,27 @@ int main(int argc, char* argv[])
 				buf[n-1] = '\0';
 				readret = strlen(buf);
 			}
+			/* For HTTP VERSION */
+			else if ( strncmp(request->http_verson, "HTTP/1.1", 9) != 0 )
+			{
+				memset(buf, 0, BUF_SIZE);
+				const char *reply = "HTTP/1.1 505 HTTP Version Not Support\r\n\r\n";
+				size_t n = ( sizeof(buf) > strlen(reply)+1 ) ? strlen(reply)+1 : sizeof(buf) ;
+				strncpy(buf, reply, n);
+				buf[n-1] = '\0';
+				readret = strlen(buf);
+			}
+			/* For TOO LONG URI */
+			else if ( strlen(request->http_uri) >= 4096) 
+			{
+				memset(buf, 0, BUF_SIZE);
+				const char *reply = "HTTP/1.1 414 Request-uri TOO LONG\r\n\r\n";
+				size_t n = ( sizeof(buf) > strlen(reply)+1 ) ? strlen(reply)+1 : sizeof(buf) ;
+				strncpy(buf, reply, n);
+				buf[n-1] = '\0';
+				readret = strlen(buf);
+			}
+			/* FOR NO IMPLEMENT */
 			else if ( (strncmp(request->http_method, "GET", 4)!=0) && 
 					  (strncmp(request->http_method, "POST", 5)!=0) &&
 					  (strncmp(request->http_method, "HEAD", 5)!=0) )
@@ -129,7 +151,57 @@ int main(int argc, char* argv[])
 				buf[n-1] = '\0';
 				readret = strlen(buf);
 			}
+			/* FOR POST */
+			else if ( (strncmp(request->http_method, "POST", 5)==0) )
+			{
 
+			}
+			/* FOR HEAD */
+			else if ( (strncmp(request->http_method, "HEAD", 4)==0) )
+			{
+				memset(buf, 0, BUF_SIZE);
+				struct stat file_state;
+				struct tm T;
+				time_t now;
+				/* Please modify the SIZE */
+				char file_path[PATH_SIZE];
+				char temp[BUF_SIZE];
+				char file_time[PATH_SIZE];
+
+				sprintf(file_path, "static_site%s", request->http_uri);
+				get_file_type(request, file_type);
+				if ( (stat(file_path, file_state) < 0) )
+				{
+					/* send 404 */
+				 	memset(buf, 0, BUF_SIZE);
+				 	const char *reply = "HTTP/1.1 404 Not Found\r\n\r\n";
+				 	size_t n = ( sizeof(buf) > strlen(reply)+1 ) ? strlen(reply)+1 : sizeof(buf) ;
+				 	strncpy(buf, reply, n);
+				 	buf[n-1] = '\0';
+				 	readret = strlen(buf);
+				}
+				
+				memset(buf, 0, BUF_SIZE);
+		        strcat(buf, "HTTP/1.1 200 OK\r\n");
+        		strcat(buf, "Connection: keep-alive\r\n");
+		        strcat(buf, "Server: liso/1.0\r\n");
+				sprintf(temp, "Content-Type: %s\r\n", file_path);
+				strcat(buf, temp);
+				sprintf(temp, "Content-Length: %ld\r\n", file_state.st_size);
+				strcat(buf, temp);
+				now = time(NULL);
+				strftime(file_time, sizeof(filetime), "%a, %d %b %Y %H:%M:%S %Z", gmtime(&now));
+				sprintf(temp, "Date: %s\r\n", file_time);
+        		strcat(buf, temp);
+				strftime(filetime, sizeof(filetime), "%a, %d %b %Y %H:%M:%S %Z",
+                gmtime(&sbuf.st_mtim.tv_sec));
+        		sprintf(temp, "Last-Modified: %s\r\n", file_time);
+        		strcat(buf, temp);
+        		strcat(buf, "\r\n");
+				readret = strlen(buf);
+			}
+
+			/* SEND */
             if (send(client_sock, buf, readret, 0) != readret)
             {
                 close_socket(client_sock);
@@ -147,6 +219,7 @@ int main(int argc, char* argv[])
 			}
         } 
 
+		/* ERROR Reading */
         if (readret == -1)
         {
             close_socket(client_sock);
@@ -155,6 +228,7 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
+		/* ERROR CLOSING SOCKET */
         if (close_socket(client_sock))
         {
             close_socket(sock);

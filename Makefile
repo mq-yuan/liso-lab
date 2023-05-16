@@ -15,7 +15,7 @@ CFLAGS   := -g -Wall
 # DEPS = parse.h y.tab.h
 
 default: all
-all : example echo_server echo_client
+all :clean example echo_server echo_client
 
 example: $(OBJ_BASE) $(OBJ_DIR)/example.o
 	$(CC) $^ -o $@
