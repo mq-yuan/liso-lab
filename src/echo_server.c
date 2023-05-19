@@ -11,7 +11,6 @@
  *                                                                             *
  *******************************************************************************/
 
-#include "parse.h"
 #include "response_parse.h"
 #include <netinet/in.h>
 #include <netinet/ip.h>
@@ -99,51 +98,25 @@ int main(int argc, char *argv[]) {
        * Errors*/
       /* For NULL */
       if (request == NULL) {
-        memset(buf, 0, BUF_SIZE);
         response_400(buf, sizeof(buf), &readret);
-        /* early implement
-const char *reply = "HTTP/1.1 400 Bad request\r\n\r\n";
-size_t n =
-    (sizeof(buf) > strlen(reply) + 1) ? strlen(reply) + 1 : sizeof(buf);
-strncpy(buf, reply, n);
-buf[n - 1] = '\0';
-readret = strlen(buf);
-        */
       }
       /* For HTTP VERSION */
       else if (strncmp(request->http_version, "HTTP/1.1", 9) != 0) {
-        memset(buf, 0, BUF_SIZE);
         response_505(buf, sizeof(buf), &readret);
-        /* early implement
-const char *reply = "HTTP/1.1 505 HTTP Version Not Support\r\n\r\n";
-size_t n =
-    (sizeof(buf) > strlen(reply) + 1) ? strlen(reply) + 1 : sizeof(buf);
-strncpy(buf, reply, n);
-buf[n - 1] = '\0';
-readret = strlen(buf);
-        */
       }
       /* FOR NO IMPLEMENT */
       else if ((strncmp(request->http_method, "GET", 4) != 0) &&
                (strncmp(request->http_method, "POST", 5) != 0) &&
                (strncmp(request->http_method, "HEAD", 5) != 0)) {
-        memset(buf, 0, BUF_SIZE);
         response_501(buf, sizeof(buf), &readret);
-        /* early implement
-const char *reply = "HTTP/1.1 501 Not Implemented\r\n\r\n";
-size_t n =
-    (sizeof(buf) > strlen(reply) + 1) ? strlen(reply) + 1 : sizeof(buf);
-strncpy(buf, reply, n);
-buf[n - 1] = '\0';
-readret = strlen(buf);
-        */
       }
       /* FOR POST */
       else if ((strncmp(request->http_method, "POST", 5) == 0)) {
-
       }
       /* FOR HEAD */
-      else if ((strncmp(request->http_method, "HEAD", 4) == 0)) {
+      else if ((strncmp(request->http_method, "HEAD", 4) == 0) ||
+               (strncmp(request->http_method, "GET", 4) == 0)) {
+        response_head(request, buf, sizeof(buf), &readret);
       }
 
       /* SEND */
