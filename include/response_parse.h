@@ -26,4 +26,7 @@ void data_now(char *Data, size_t _size);
 void data_modify(char *lastmodify, size_t _size, char *fullpath);
 void content_length(char *contentlength, char *fullpath);
 
-void response_head(Request *request, char *buf, size_t _szie, ssize_t *readret);
+void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
+                   size_t _size, ssize_t *readret);
+void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
+                  size_t _size, ssize_t *readret);

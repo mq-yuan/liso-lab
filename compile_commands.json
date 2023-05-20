@@ -7,11 +7,11 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/echo_client.o",
-            "src/echo_client.c"
+            "obj/echo_server.o",
+            "src/echo_server.c"
         ],
         "directory": "/home/project-1",
-        "file": "src/echo_client.c"
+        "file": "src/echo_server.c"
     },
     {
         "arguments": [
@@ -63,11 +63,11 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/echo_server.o",
-            "src/echo_server.c"
+            "obj/echo_client.o",
+            "src/echo_client.c"
         ],
         "directory": "/home/project-1",
-        "file": "src/echo_server.c"
+        "file": "src/echo_client.c"
     },
     {
         "arguments": [

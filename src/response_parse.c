@@ -153,9 +153,8 @@ void response_write(char *buf, size_t _size, ssize_t *readret,
 // ===
 // === HEAD && GET
 // ===
-void response_head(Request *request, char *buf, size_t _size,
-                   ssize_t *readret) {
-  char fullpath[4096];
+void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
+                   size_t _size, ssize_t *readret) {
   char filetype[64];
   char Data[1024];
   char contentlength[1024];
@@ -166,14 +165,18 @@ void response_head(Request *request, char *buf, size_t _size,
 
   /* parse filetype && content length */
   int status;
-  get_fullpath(fullpath, sizeof(fullpath), request->http_uri);
+  get_fullpath(fullpath, f_size, request->http_uri);
   status = check_file(fullpath);
   switch (status) {
   case -1:
+    memset(fullpath, 0, f_size);
     response_404(buf, _size, readret);
+    strncpy(fullpath, "", strlen(""));
     return;
   case 0:
+    memset(fullpath, 0, f_size);
     response_403(buf, _size, readret);
+    strncpy(fullpath, "", strlen(""));
     return;
   default:
     break;
@@ -187,4 +190,18 @@ void response_head(Request *request, char *buf, size_t _size,
 
   response_write(buf, _size, readret, statusline, connectline, serverline, Data,
                  filetype, contentlength, lastmodify);
+}
+
+void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
+                  size_t _size, ssize_t *readret) {
+  response_head(fullpath, f_size, request, buf, _size, readret);
+  FILE *file = fopen(fullpath, "r");
+  fseek(file, 0, SEEK_END);
+  long fileSize = ftell(file);
+  rewind(file);
+  char *buffer = malloc(fileSize + 1);
+  fread(buffer, 1, fileSize, file);
+  buffer[fileSize] = '\0';
+  fclose(file);
+  strcat(buf, buffer);
 }

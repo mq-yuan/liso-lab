@@ -39,12 +39,24 @@ void signal_handler(int signum) {
   exit(signum);
 }
 
+int send_message(int sock, int client_sock, char *buf, ssize_t readret) {
+  readret = strlen(buf);
+  if (send(client_sock, buf, readret, 0) != readret) {
+    close_socket(client_sock);
+    close_socket(sock);
+    fprintf(stderr, "Error sending to client.\n");
+    return 0; // Bad
+  }
+  return 1; // Normal
+}
+
 int main(int argc, char *argv[]) {
   int echo_port;
   ssize_t readret;
   socklen_t cli_size;
   struct sockaddr_in addr, cli_addr;
   char buf[BUF_SIZE];
+  char fullpath[4096];
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);
@@ -114,19 +126,23 @@ int main(int argc, char *argv[]) {
       else if ((strncmp(request->http_method, "POST", 5) == 0)) {
       }
       /* FOR HEAD */
-      else if ((strncmp(request->http_method, "HEAD", 4) == 0) ||
-               (strncmp(request->http_method, "GET", 4) == 0)) {
-        response_head(request, buf, sizeof(buf), &readret);
+      else if ((strncmp(request->http_method, "HEAD", 5) == 0)) {
+        response_head(fullpath, sizeof(fullpath), request, buf, sizeof(buf),
+                      &readret);
+      }
+      /* FOR GET */
+      else if ((strncmp(request->http_method, "GET", 4) == 0)) {
+        response_get(fullpath, sizeof(fullpath), request, buf, sizeof(buf),
+                     &readret);
       }
 
       /* SEND */
-      if (send(client_sock, buf, readret, 0) != readret) {
-        close_socket(client_sock);
-        close_socket(sock);
-        fprintf(stderr, "Error sending to client.\n");
+      if (send_message(sock, client_sock, buf, readret) == 0) {
         return EXIT_FAILURE;
       }
+
       memset(buf, 0, BUF_SIZE);
+      memset(fullpath, 0, sizeof(fullpath));
 
       /* free memory */
       if (request != NULL) {
