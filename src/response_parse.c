@@ -195,13 +195,12 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
 void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
                   size_t _size, ssize_t *readret) {
   response_head(fullpath, f_size, request, buf, _size, readret);
-  FILE *file = fopen(fullpath, "r");
-  fseek(file, 0, SEEK_END);
-  long fileSize = ftell(file);
-  rewind(file);
-  char *buffer = malloc(fileSize + 1);
-  fread(buffer, 1, fileSize, file);
-  buffer[fileSize] = '\0';
-  fclose(file);
-  strcat(buf, buffer);
+  // FILE *file = fopen(fullpath, "rb");
+  // fseek(file, 0, SEEK_END);
+  // long fileSize = ftell(file);
+  // rewind(file);
+  // char *buffer = malloc(fileSize + 1);
+  // fread(buffer, 1, fileSize, file);
+  // fclose(file);
+  // strcat(buf, buffer);
 }

@@ -39,8 +39,8 @@ void signal_handler(int signum) {
   exit(signum);
 }
 
-int send_message(int sock, int client_sock, char *buf, ssize_t readret) {
-  readret = strlen(buf);
+int send_message(int sock, int client_sock, const char *buf) {
+  ssize_t readret = strlen(buf);
   if (send(client_sock, buf, readret, 0) != readret) {
     close_socket(client_sock);
     close_socket(sock);
@@ -48,6 +48,43 @@ int send_message(int sock, int client_sock, char *buf, ssize_t readret) {
     return 0; // Bad
   }
   return 1; // Normal
+}
+
+int send_message_bit(int sock, int client_sock, const char *buf,
+                     ssize_t readret) {
+  if (send(client_sock, buf, readret, 0) != readret) {
+    close_socket(client_sock);
+    close_socket(sock);
+    fprintf(stderr, "Error sending to client.\n");
+    return 0; // Bad
+  }
+  return 1; // Normal
+}
+
+int handle_get_request(int client_sock, const char *filename, char *buf) {
+  const char *status = "HTTP/1.1 200 OK\r\n";
+  if (strncmp(buf, status, strlen(status)) != 0) {
+    send_message(sock, client_sock, buf);
+  }
+  ssize_t readret = strlen(buf);
+  if (send_message(sock, client_sock, buf) == 0) {
+    return 0;
+  }
+  FILE *file = fopen(filename, "rb");
+  while (((readret = fread(buf, 1, BUF_SIZE, file)))) {
+    if (readret <= 0) {
+      break;
+    }
+    if (feof(file)) {
+      printf("Received end of file\n");
+    } else if (ferror(file)) {
+      printf("Error reading file\n");
+    }
+    if (send_message_bit(sock, client_sock, buf, readret) == 0) {
+      return 0;
+    }
+  }
+  return 1;
 }
 
 int main(int argc, char *argv[]) {
@@ -137,8 +174,14 @@ int main(int argc, char *argv[]) {
       }
 
       /* SEND */
-      if (send_message(sock, client_sock, buf, readret) == 0) {
-        return EXIT_FAILURE;
+      if ((strncmp(request->http_method, "GET", 4) != 0)) {
+        if (send_message(sock, client_sock, buf) == 0) {
+          return EXIT_FAILURE;
+        }
+      } else {
+        if (handle_get_request(client_sock, fullpath, buf) == 0) {
+          return EXIT_FAILURE;
+        }
       }
 
       memset(buf, 0, BUF_SIZE);
@@ -153,6 +196,7 @@ int main(int argc, char *argv[]) {
 
     /* ERROR Reading */
     if (readret == -1) {
+      perror("ERROR readret = -1");
       close_socket(client_sock);
       close_socket(sock);
       fprintf(stderr, "Error reading from client socket.\n");
