@@ -11,6 +11,7 @@
  *                                                                             *
  *******************************************************************************/
 
+#include "parse.h"
 #include "response_parse.h"
 #include <netinet/in.h>
 #include <netinet/ip.h>
@@ -65,6 +66,7 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
   const char *status = "HTTP/1.1 200 OK\r\n";
   if (strncmp(buf, status, strlen(status)) != 0) {
     send_message(sock, client_sock, buf);
+    return 1;
   }
   ssize_t readret = strlen(buf);
   if (send_message(sock, client_sock, buf) == 0) {
@@ -74,11 +76,6 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
   while (((readret = fread(buf, 1, BUF_SIZE, file)))) {
     if (readret <= 0) {
       break;
-    }
-    if (feof(file)) {
-      printf("Received end of file\n");
-    } else if (ferror(file)) {
-      printf("Error reading file\n");
     }
     if (send_message_bit(sock, client_sock, buf, readret) == 0) {
       return 0;
@@ -93,7 +90,7 @@ int main(int argc, char *argv[]) {
   socklen_t cli_size;
   struct sockaddr_in addr, cli_addr;
   char buf[BUF_SIZE];
-  char fullpath[4096];
+  char fullpath[BUF_SIZE];
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);

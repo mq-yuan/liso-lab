@@ -7,11 +7,25 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/echo_client.o",
-            "src/echo_client.c"
+            "obj/lex.yy.o",
+            "src/lex.yy.c"
         ],
         "directory": "/home/project-1",
-        "file": "src/echo_client.c"
+        "file": "src/lex.yy.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/example.o",
+            "src/example.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/example.c"
     },
     {
         "arguments": [
@@ -26,20 +40,6 @@
         ],
         "directory": "/home/project-1",
         "file": "src/response_parse.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
-            "obj/echo_server.o",
-            "src/echo_server.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/echo_server.c"
     },
     {
         "arguments": [
@@ -77,11 +77,11 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/example.o",
-            "src/example.c"
+            "obj/utils.o",
+            "src/utils.c"
         ],
         "directory": "/home/project-1",
-        "file": "src/example.c"
+        "file": "src/utils.c"
     },
     {
         "arguments": [
@@ -91,10 +91,24 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/lex.yy.o",
-            "src/lex.yy.c"
+            "obj/liso_server.o",
+            "src/liso_server.c"
         ],
         "directory": "/home/project-1",
-        "file": "src/lex.yy.c"
+        "file": "src/liso_server.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/echo_client.o",
+            "src/echo_client.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/echo_client.c"
     }
 ]
