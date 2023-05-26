@@ -78,7 +78,7 @@ void data_now(char *Data, size_t _size) {
   struct tm *localTime;
   currenttime = time(NULL);
   localTime = localtime(&currenttime);
-  strftime(Data, _size, "Data: %a, %d %b %Y %H:%M:%S %Z\r\n", localTime);
+  strftime(Data, _size, "Data: %a, %d %b %Y %H:%M:%S %Z", localTime);
 }
 
 void data_modify(char *lastmodify, size_t _size, char *fullpath) {
@@ -86,7 +86,7 @@ void data_modify(char *lastmodify, size_t _size, char *fullpath) {
   struct tm *modifyTime;
   if (stat(fullpath, &st) == 0) {
     modifyTime = gmtime(&st.st_mtime);
-    strftime(lastmodify, _size, "Last-modified: %a, %d %b %Y %H:%M:%S %Z\r\n",
+    strftime(lastmodify, _size, "Last-modified: %a, %d %b %Y %H:%M:%S %Z",
              modifyTime);
   } else {
     strcpy(lastmodify, "");

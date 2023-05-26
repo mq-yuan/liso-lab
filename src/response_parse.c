@@ -9,6 +9,7 @@ void response_400(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
+  accessLOG(reply);
 }
 
 void response_505(char *buf, size_t _size, ssize_t *readret) {
@@ -17,6 +18,7 @@ void response_505(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
+  accessLOG(reply);
 }
 
 void response_501(char *buf, size_t _size, ssize_t *readret) {
@@ -25,6 +27,7 @@ void response_501(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
+  accessLOG(reply);
 }
 
 void response_404(char *buf, size_t _size, ssize_t *readret) {
@@ -33,6 +36,7 @@ void response_404(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
+  accessLOG(reply);
 }
 
 void response_403(char *buf, size_t _size, ssize_t *readret) {
@@ -41,6 +45,7 @@ void response_403(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
+  errorLOG(reply);
 }
 
 void response_write(char *buf, size_t _size, ssize_t *readret,
@@ -95,7 +100,9 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
 
   /* parse now time && last modify time */
   data_now(Data, sizeof(Data));
+  strcat(Data, "\r\n");
   data_modify(lastmodify, sizeof(lastmodify), fullpath);
+  strcat(lastmodify, "\r\n");
 
   response_write(buf, _size, readret, statusline, connectline, serverline, Data,
                  filetype, contentlength, lastmodify);

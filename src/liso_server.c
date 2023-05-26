@@ -30,6 +30,7 @@ int sock, client_sock;
 int close_socket(int sock) {
   if (close(sock)) {
     fprintf(stderr, "Failed closing socket.\n");
+    errorLOG("Failed closing socket.\r\n");
     return 1;
   }
   return 0;
@@ -46,6 +47,7 @@ int send_message(int sock, int client_sock, const char *buf) {
     close_socket(client_sock);
     close_socket(sock);
     fprintf(stderr, "Error sending to client.\n");
+    errorLOG("Error sending to client.\r\n");
     return 0; // Bad
   }
   return 1; // Normal
@@ -57,6 +59,7 @@ int send_message_bit(int sock, int client_sock, const char *buf,
     close_socket(client_sock);
     close_socket(sock);
     fprintf(stderr, "Error sending to client.\n");
+    errorLOG("Error sending to client.\r\n");
     return 0; // Bad
   }
   return 1; // Normal
@@ -104,6 +107,7 @@ int main(int argc, char *argv[]) {
   /* all networked programs must create a socket */
   if ((sock = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
     fprintf(stderr, "Failed creating socket.\n");
+    errorLOG("Failed creating socket.\r\n");
     return EXIT_FAILURE;
   }
 
@@ -115,12 +119,14 @@ int main(int argc, char *argv[]) {
   if (bind(sock, (struct sockaddr *)&addr, sizeof(addr))) {
     close_socket(sock);
     fprintf(stderr, "Failed binding socket.\n");
+    errorLOG("Failed binding socket.\r\n");
     return EXIT_FAILURE;
   }
 
   if (listen(sock, 5)) {
     close_socket(sock);
     fprintf(stderr, "Error listening on socket.\n");
+    errorLOG("Error listening on socket.\r\n");
     return EXIT_FAILURE;
   }
 
@@ -131,6 +137,7 @@ int main(int argc, char *argv[]) {
         -1) {
       close(sock);
       fprintf(stderr, "Error accepting connection.\n");
+      errorLOG("Error accepting connection.\r\n");
       return EXIT_FAILURE;
     }
 
@@ -174,10 +181,16 @@ int main(int argc, char *argv[]) {
       if ((strncmp(request->http_method, "GET", 4) != 0)) {
         if (send_message(sock, client_sock, buf) == 0) {
           return EXIT_FAILURE;
+        } else {
+          accessLOG("SUCCESS");
         }
       } else {
         if (handle_get_request(client_sock, fullpath, buf) == 0) {
           return EXIT_FAILURE;
+        } else {
+          memset(buf, 0, BUF_SIZE);
+          sprintf(buf, "SUCCESS SEND %s RESPONSE", request->http_method);
+          accessLOG(buf);
         }
       }
 
@@ -193,10 +206,10 @@ int main(int argc, char *argv[]) {
 
     /* ERROR Reading */
     if (readret == -1) {
-      perror("ERROR readret = -1");
       close_socket(client_sock);
       close_socket(sock);
       fprintf(stderr, "Error reading from client socket.\n");
+      errorLOG("Error reading from client socket.\r\n");
       return EXIT_FAILURE;
     }
 
@@ -204,6 +217,7 @@ int main(int argc, char *argv[]) {
     if (close_socket(client_sock)) {
       close_socket(sock);
       fprintf(stderr, "Error closing client socket.\n");
+      errorLOG("Error closing client socket.\r\n");
       return EXIT_FAILURE;
     }
   }
