@@ -23,7 +23,7 @@
 #include <unistd.h>
 
 #define ECHO_PORT 9999
-#define BUF_SIZE 4096
+#define BUF_SIZE 40960
 
 int sock, client_sock;
 
@@ -72,17 +72,14 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
     return 1;
   }
   ssize_t readret = strlen(buf);
-  if (send_message(sock, client_sock, buf) == 0) {
-    return 0;
-  }
+  ssize_t _readret;
   FILE *file = fopen(filename, "rb");
-  while (((readret = fread(buf, 1, BUF_SIZE, file)))) {
-    if (readret <= 0) {
-      break;
-    }
-    if (send_message_bit(sock, client_sock, buf, readret) == 0) {
-      return 0;
-    }
+  while ((_readret = fread(buf + readret, 1, BUF_SIZE, file)) &&
+         (_readret > 0)) {
+    readret = readret + _readret;
+  }
+  if (send_message_bit(sock, client_sock, buf, readret) == 0) {
+    return 0;
   }
   return 1;
 }
