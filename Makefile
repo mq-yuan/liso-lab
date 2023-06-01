@@ -43,3 +43,7 @@ $(OBJ_DIR):
 clean:
 	$(RM) $(OBJ) $(BIN) $(SRC_DIR)/lex.yy.c $(SRC_DIR)/y.tab.*
 	$(RM) -r $(OBJ_DIR)
+
+tar:
+	$(RM) ../week2.tar
+	tar -cvf ../week2.tar *

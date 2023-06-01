@@ -1,0 +1,28 @@
+127.0.0.1 - - [Data: Mon, 29 May 2023 18:57:02 CST] Failed binding socket.
+
+[Data: Mon, 29 May 2023 18:57:02 CST] [core:error] [pid:564347] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:33:43 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:33:43 CST] [core:error] [pid:795190] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:00 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:47:00 CST] [core:error] [pid:800081] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:03 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:47:03 CST] [core:error] [pid:800111] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:57 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:47:57 CST] [core:error] [pid:800400] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:48:34 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:48:34 CST] [core:error] [pid:800651] [client 127.0.0.1] Failed binding socket.
+
+127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:52:21 CST] Failed binding socket.
+
+[Data: Thu, 01 Jun 2023 21:52:21 CST] [core:error] [pid:801927] [client 127.0.0.1] Failed binding socket.
+

@@ -74,12 +74,12 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
   ssize_t readret = strlen(buf);
   ssize_t _readret;
   FILE *file = fopen(filename, "rb");
-  while ((_readret = fread(buf + readret, 1, BUF_SIZE, file)) &&
+  while ((_readret = fread(buf + readret, 1, BUF_SIZE - readret, file)) &&
          (_readret > 0)) {
-    readret = readret + _readret;
-  }
-  if (send_message_bit(sock, client_sock, buf, readret) == 0) {
-    return 0;
+    if (send_message_bit(sock, client_sock, buf, readret + _readret) == 0) {
+      return 0;
+    }
+    memset(buf + readret, 0, _readret);
   }
   return 1;
 }
@@ -112,12 +112,23 @@ int main(int argc, char *argv[]) {
   addr.sin_port = htons(echo_port);
   addr.sin_addr.s_addr = INADDR_ANY;
 
+  /* Allow address reuse */
+  int reuse = 1;
+  if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse)) == -1) {
+    perror("Set socket option failed");
+    exit(EXIT_FAILURE);
+  }
+
   /* servers bind sockets to ports---notify the OS they accept connections */
   if (bind(sock, (struct sockaddr *)&addr, sizeof(addr))) {
-    close_socket(sock);
-    fprintf(stderr, "Failed binding socket.\n");
-    errorLOG("Failed binding socket.\r\n");
-    return EXIT_FAILURE;
+    releasePort(echo_port);
+    if (bind(sock, (struct sockaddr *)&addr, sizeof(addr))) {
+      close_socket(sock);
+      perror("Bind socket");
+      fprintf(stderr, "Failed binding socket.\n");
+      errorLOG("Failed binding socket.\r\n");
+      return EXIT_FAILURE;
+    }
   }
 
   if (listen(sock, 5)) {

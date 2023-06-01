@@ -106,3 +106,27 @@ int strpost(const char *str, const char target) {
   }
   return -1;
 }
+
+int checkPortInUse(int port) {
+  int isUsed = 0;
+  char command[50];
+  sprintf(command, "lsof -i :%d", port);
+  FILE *fp = popen(command, "r");
+  if (fp != NULL) {
+    char output[1024];
+    while (fgets(output, sizeof(output), fp) != NULL) {
+      if (strstr(output, "LISTEN") != NULL) {
+        isUsed = 1;
+        break;
+      }
+    }
+    pclose(fp);
+  }
+  return isUsed;
+}
+
+void releasePort(int port) {
+  char command[50];
+  sprintf(command, "lsof -t -i :%d | xargs kill", port);
+  system(command);
+}

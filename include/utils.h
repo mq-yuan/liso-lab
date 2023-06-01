@@ -2,6 +2,7 @@
 #define UTILS_h
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
@@ -14,5 +15,7 @@ void data_now(char *Data, size_t _size);
 void data_modify(char *lastmodify, size_t _size, char *fullpath);
 void content_length(char *contentlength, char *fullpath);
 int strpost(const char *str, const char target);
+int checkPortInUse(int port);
+void releasePort(int port);
 
 #endif
