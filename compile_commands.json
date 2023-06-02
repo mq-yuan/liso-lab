@@ -7,81 +7,11 @@
             "-g",
             "-Wall",
             "-o",
-            "obj/log.o",
-            "src/log.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/log.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
-            "obj/example.o",
-            "src/example.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/example.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
             "obj/echo_client.o",
             "src/echo_client.c"
         ],
         "directory": "/home/project-1",
         "file": "src/echo_client.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
-            "obj/lex.yy.o",
-            "src/lex.yy.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/lex.yy.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
-            "obj/response_parse.o",
-            "src/response_parse.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/response_parse.c"
-    },
-    {
-        "arguments": [
-            "cc",
-            "-c",
-            "-Iinclude",
-            "-g",
-            "-Wall",
-            "-o",
-            "obj/liso_server.o",
-            "src/liso_server.c"
-        ],
-        "directory": "/home/project-1",
-        "file": "src/liso_server.c"
     },
     {
         "arguments": [
@@ -119,10 +49,80 @@
             "-g",
             "-Wall",
             "-o",
+            "obj/response_parse.o",
+            "src/response_parse.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/response_parse.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/lex.yy.o",
+            "src/lex.yy.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/lex.yy.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/example.o",
+            "src/example.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/example.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/liso_server.o",
+            "src/liso_server.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/liso_server.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
             "obj/parse.o",
             "src/parse.c"
         ],
         "directory": "/home/project-1",
         "file": "src/parse.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Iinclude",
+            "-g",
+            "-Wall",
+            "-o",
+            "obj/log.o",
+            "src/log.c"
+        ],
+        "directory": "/home/project-1",
+        "file": "src/log.c"
     }
 ]

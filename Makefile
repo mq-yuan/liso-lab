@@ -15,7 +15,7 @@ CFLAGS   := -g -Wall
 # DEPS = parse.h y.tab.h
 
 default: all
-all :clean example liso_server echo_client
+all :clean example liso_server echo_client 
 
 example: $(OBJ_BASE) $(OBJ_DIR)/example.o
 	$(CC) $^ -o $@
@@ -47,3 +47,7 @@ clean:
 tar:
 	$(RM) ../week2.tar
 	tar -cvf ../week2.tar *
+
+utils:
+	ls -Rl ../..
+	cat cp2_checker.py

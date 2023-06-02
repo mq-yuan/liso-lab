@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
       }
 
       /* SEND */
-      if ((strncmp(request->http_method, "GET", 4) != 0)) {
+      if ((request == NULL) || (strncmp(request->http_method, "GET", 4) != 0)) {
         if (send_message(sock, client_sock, buf) == 0) {
           return EXIT_FAILURE;
         } else {

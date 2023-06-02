@@ -26,3 +26,7 @@
 
 [Data: Thu, 01 Jun 2023 21:52:21 CST] [core:error] [pid:801927] [client 127.0.0.1] Failed binding socket.
 
+127.0.0.1 - - [Data: Fri, 02 Jun 2023 18:53:13 CST] Failed binding socket.
+
+[Data: Fri, 02 Jun 2023 18:53:13 CST] [core:error] [pid:875120] [client 127.0.0.1] Failed binding socket.
+

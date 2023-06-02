@@ -32,7 +32,7 @@ void response_501(char *buf, size_t _size, ssize_t *readret) {
 
 void response_404(char *buf, size_t _size, ssize_t *readret) {
   memset(buf, 0, _size);
-  const char *reply = "HTTP/1.1 404 Bad request\r\n\r\n";
+  const char *reply = "HTTP/1.1 404 Not Found\r\n\r\n";
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
