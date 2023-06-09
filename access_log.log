@@ -802,3 +802,135 @@
 
 127.0.0.1 - - [Data: Fri, 02 Jun 2023 19:10:06 CST] SUCCESS
 [Data: Fri, 02 Jun 2023 19:10:06 CST] [core:access] [pid:879934] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] HTTP/1.1 400 Bad request
+
+
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 400 Bad request
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] HTTP/1.1 400 Bad request
+
+
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 400 Bad request
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] HTTP/1.1 400 Bad request
+
+
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 400 Bad request
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:55 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:55 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:56 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:56 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:57 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:57 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:58 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:58 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:58 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:58 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:58 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:58 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:58 CST] HTTP/1.1 400 Bad request
+
+
+[Data: Fri, 09 Jun 2023 10:55:58 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 400 Bad request
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:58 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:58 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 404 Not Found
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 404 Not Found
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 404 Not Found
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 404 Not Found
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 404 Not Found
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 404 Not Found
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 501 Not Implemented
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 501 Not Implemented
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 501 Not Implemented
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 505 HTTP Version not supported
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 505 HTTP Version not supported
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] HTTP/1.1 505 HTTP Version not supported
+
+
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:59 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:55:59 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:56:03 CST] SUCCESS SEND GET RESPONSE
+[Data: Fri, 09 Jun 2023 10:56:03 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS SEND GET RESPONSE
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:56:03 CST] HTTP/1.1 501 Not Implemented
+
+
+[Data: Fri, 09 Jun 2023 10:56:03 CST] [core:access] [pid:262831] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+
+
+127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:56:03 CST] SUCCESS
+[Data: Fri, 09 Jun 2023 10:56:03 CST] [core:access] [pid:262831] [client 127.0.0.1] SUCCESS

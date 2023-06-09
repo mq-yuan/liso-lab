@@ -1,5 +1,6 @@
 #include "log.h"
 char *IP = "127.0.0.1";
+char log_buf[LOG_BUF_SIZE];
 
 void messageLOG(FILE *file, const char *msg, const char *log_type) {
   char date_time[TYPE_SIZE];
