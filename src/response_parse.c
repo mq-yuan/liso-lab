@@ -85,12 +85,12 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
   case -1:
     memset(fullpath, 0, f_size);
     response_404(buf, _size, readret);
-    strncpy(fullpath, "", strlen(""));
+    /* strncpy(fullpath, "", strlen("")); */
     return;
   case 0:
     memset(fullpath, 0, f_size);
     response_403(buf, _size, readret);
-    strncpy(fullpath, "", strlen(""));
+    /* strncpy(fullpath, "", strlen("")); */
     return;
   default:
     break;
