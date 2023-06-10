@@ -23,7 +23,7 @@
 #include <unistd.h>
 
 #define ECHO_PORT 9999
-#define BUF_SIZE 40960
+#define BUF_SIZE 8192
 
 int sock, client_sock;
 
@@ -79,7 +79,9 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
     if (send_message_bit(sock, client_sock, buf, readret + _readret) == 0) {
       return 0;
     }
-    memset(buf + readret, 0, _readret);
+    /* clear the buf */
+    memset(buf, 0, readret + _readret);
+    readret = 0; // clear the response head
   }
   return 1;
 }
