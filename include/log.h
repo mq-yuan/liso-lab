@@ -1,9 +1,7 @@
 #ifndef LOG_H
 #define LOG_H
-#define LOG_BUF_SIZE 1024
-#define TYPE_SIZE 1024
-#define LOG_SIZE 4096
 
+#include "constants.h"
 #include "utils.h"
 #include <stdio.h>
 #include <unistd.h>

@@ -3,9 +3,9 @@ char *IP = "127.0.0.1";
 char log_buf[LOG_BUF_SIZE];
 
 void messageLOG(FILE *file, const char *msg, const char *log_type) {
-  char date_time[TYPE_SIZE];
+  char date_time[FIELD_SIZE];
   char message[LOG_SIZE];
-  data_now(date_time, TYPE_SIZE);
+  data_now(date_time, FIELD_SIZE);
   if (file != NULL) {
     sprintf(message, "%s - - [%s] %s\r\n", IP, date_time, msg);
     fputs(message, file);

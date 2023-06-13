@@ -34,3 +34,23 @@
 
 [Data: Fri, 09 Jun 2023 10:55:40 CST] [core:error] [pid:262758] [client 127.0.0.1] Failed binding socket.
 
+127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:22:53 CST] Error reading from client socket.
+
+[Data: Tue, 13 Jun 2023 21:22:53 CST] [core:error] [pid:38248] [client 127.0.0.1] Error reading from client socket.
+
+127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:47:58 CST] Error reading from client socket.
+
+[Data: Tue, 13 Jun 2023 21:47:58 CST] [core:error] [pid:40323] [client 127.0.0.1] Error reading from client socket.
+
+127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:50:39 CST] Error reading from client socket.
+
+[Data: Tue, 13 Jun 2023 21:50:39 CST] [core:error] [pid:40772] [client 127.0.0.1] Error reading from client socket.
+
+127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:51:38 CST] Error reading from client socket.
+
+[Data: Tue, 13 Jun 2023 21:51:38 CST] [core:error] [pid:40994] [client 127.0.0.1] Error reading from client socket.
+
+127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:52:46 CST] Error reading from client socket.
+
+[Data: Tue, 13 Jun 2023 21:52:46 CST] [core:error] [pid:41478] [client 127.0.0.1] Error reading from client socket.
+

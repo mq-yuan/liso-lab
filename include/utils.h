@@ -1,5 +1,6 @@
 #ifndef UTILS_h
 #define UTILS_h
+#include "constants.h"
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +15,9 @@ void parse_type(char *fullpath, char *filetype);
 void data_now(char *Data, size_t _size);
 void data_modify(char *lastmodify, size_t _size, char *fullpath);
 void content_length(char *contentlength, char *fullpath);
-int strpost(const char *str, const char target);
+int strpos(const char *str, const char target);
+int char_split(const char *input, const char *delimiter,
+               char regions[MAX_REGIONS][BUF_SIZE]);
 int checkPortInUse(int port);
 void releasePort(int port);
 

@@ -11,8 +11,10 @@
  *                                                                             *
  *******************************************************************************/
 
+#include "constants.h"
 #include "parse.h"
 #include "response_parse.h"
+#include "utils.h"
 #include <netinet/in.h>
 #include <netinet/ip.h>
 #include <signal.h>
@@ -21,9 +23,6 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-
-#define ECHO_PORT 9999
-#define BUF_SIZE 8192
 
 int sock, client_sock;
 
@@ -93,6 +92,8 @@ int main(int argc, char *argv[]) {
   struct sockaddr_in addr, cli_addr;
   char buf[BUF_SIZE];
   char fullpath[BUF_SIZE];
+  char request_regions[MAX_REGIONS][BUF_SIZE];
+  ssize_t base;
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);
@@ -152,66 +153,76 @@ int main(int argc, char *argv[]) {
     }
 
     readret = 0;
+    base = 0;
 
-    while ((readret = recv(client_sock, buf, BUF_SIZE, 0)) >= 1) {
+    while ((readret = recv(client_sock, buf + base, BUF_SIZE - base, 0)) >= 1) {
       /* Parsing */
-      Request *request = parse(buf, BUF_SIZE, client_sock);
+      /* Request *request = parse(buf, BUF_SIZE, client_sock); */
+      int regions_num = char_split(buf, "\r\n\r\n", request_regions);
 
-      /* Generating the Response Messages for Unimplemented and Formatting
-       * Errors*/
-      /* For NULL */
-      if (request == NULL) {
-        response_400(buf, sizeof(buf), &readret);
-      }
-      /* For HTTP VERSION */
-      else if (strncmp(request->http_version, "HTTP/1.1", 9) != 0) {
-        response_505(buf, sizeof(buf), &readret);
-      }
-      /* FOR NO IMPLEMENT */
-      else if ((strncmp(request->http_method, "GET", 4) != 0) &&
-               (strncmp(request->http_method, "POST", 5) != 0) &&
-               (strncmp(request->http_method, "HEAD", 5) != 0)) {
-        response_501(buf, sizeof(buf), &readret);
-      }
-      /* FOR POST */
-      else if ((strncmp(request->http_method, "POST", 5) == 0)) {
-      }
-      /* FOR HEAD */
-      else if ((strncmp(request->http_method, "HEAD", 5) == 0)) {
-        response_head(fullpath, sizeof(fullpath), request, buf, sizeof(buf),
-                      &readret);
-      }
-      /* FOR GET */
-      else if ((strncmp(request->http_method, "GET", 4) == 0)) {
-        response_get(fullpath, sizeof(fullpath), request, buf, sizeof(buf),
-                     &readret);
-      }
-
-      /* SEND */
-      if ((request == NULL) || (strncmp(request->http_method, "GET", 4) != 0)) {
-        if (send_message(sock, client_sock, buf) == 0) {
-          return EXIT_FAILURE;
-        } else {
-          accessLOG("SUCCESS");
+      for (int _r = 0; _r < regions_num - 1; _r++) {
+        char *token = request_regions[_r];
+        Request *request = parse(token, BUF_SIZE, client_sock);
+        /* Generating the Response Messages for Unimplemented and Formatting
+         * Errors*/
+        /* For NULL */
+        if (request == NULL) {
+          response_400(token, strlen(token), &readret);
         }
-      } else {
-        if (handle_get_request(client_sock, fullpath, buf) == 0) {
-          return EXIT_FAILURE;
+        /* For HTTP VERSION */
+        else if (strncmp(request->http_version, "HTTP/1.1", 9) != 0) {
+          response_505(token, strlen(token), &readret);
+        }
+        /* FOR NO IMPLEMENT */
+        else if ((strncmp(request->http_method, "GET", 4) != 0) &&
+                 (strncmp(request->http_method, "POST", 5) != 0) &&
+                 (strncmp(request->http_method, "HEAD", 5) != 0)) {
+          response_501(token, strlen(token), &readret);
+        }
+        /* FOR POST */
+        else if ((strncmp(request->http_method, "POST", 5) == 0)) {
+        }
+        /* FOR HEAD */
+        else if ((strncmp(request->http_method, "HEAD", 5) == 0)) {
+          response_head(fullpath, sizeof(fullpath), request, token,
+                        sizeof(token), &readret);
+        }
+        /* FOR GET */
+        else if ((strncmp(request->http_method, "GET", 4) == 0)) {
+          response_get(fullpath, sizeof(fullpath), request, token,
+                       sizeof(token), &readret);
+        }
+
+        /* SEND */
+        if ((request == NULL) ||
+            (strncmp(request->http_method, "GET", 4) != 0)) {
+          if (send_message(sock, client_sock, token) == 0) {
+            return EXIT_FAILURE;
+          } else {
+            accessLOG("SUCCESS");
+          }
         } else {
-          memset(buf, 0, BUF_SIZE);
-          sprintf(buf, "SUCCESS SEND %s RESPONSE", request->http_method);
-          accessLOG(buf);
+          if (handle_get_request(client_sock, fullpath, token) == 0) {
+            return EXIT_FAILURE;
+          } else {
+            memset(token, 0, BUF_SIZE);
+            sprintf(token, "SUCCESS SEND %s RESPONSE", request->http_method);
+            accessLOG(token);
+          }
+        }
+
+        memset(token, 0, BUF_SIZE);
+        memset(fullpath, 0, sizeof(fullpath));
+
+        /* free memory */
+        if (request != NULL) {
+          free(request->headers);
+          free(request);
         }
       }
-
       memset(buf, 0, BUF_SIZE);
-      memset(fullpath, 0, sizeof(fullpath));
-
-      /* free memory */
-      if (request != NULL) {
-        free(request->headers);
-        free(request);
-      }
+      strcat(buf, request_regions[regions_num - 1]);
+      base = strlen(buf);
     }
 
     /* ERROR Reading */

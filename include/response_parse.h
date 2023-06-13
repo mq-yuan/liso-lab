@@ -1,5 +1,6 @@
 #ifndef RESPONSE_PARSE_H
 #define RESPONSE_PARSE_H
+#include "constants.h"
 #include "log.h"
 #include "parse.h"
 #include "utils.h"

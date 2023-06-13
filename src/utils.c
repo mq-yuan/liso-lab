@@ -6,9 +6,9 @@ void get_fullpath(char *fullpath, size_t _size, const char *uri) {
   size_t n =
       (_size > strlen(static_site_path)) ? strlen(static_site_path) : _size;
   strncpy(fullpath, static_site_path, n);
-  int post = strpost(uri, '?');
-  if (post != -1) {
-    strncat(fullpath, uri, post);
+  int pos = strpos(uri, '?');
+  if (pos != -1) {
+    strncat(fullpath, uri, pos);
   } else {
     strcat(fullpath, uri);
   }
@@ -93,15 +93,15 @@ void data_modify(char *lastmodify, size_t _size, char *fullpath) {
   }
 }
 
-int strpost(const char *str, const char target) {
-  int post, length;
-  post = 0;
+int strpos(const char *str, const char target) {
+  int pos, length;
+  pos = 0;
   length = strlen(str);
-  while (post < length) {
-    if (str[post] != target) {
-      post++;
+  while (pos < length) {
+    if (str[pos] != target) {
+      pos++;
     } else {
-      return post;
+      return pos;
     }
   }
   return -1;
@@ -129,4 +129,26 @@ void releasePort(int port) {
   char command[50];
   sprintf(command, "lsof -t -i :%d | xargs kill", port);
   system(command);
+}
+
+int char_split(const char *input, const char *delimiter,
+               char regions[MAX_REGIONS][BUF_SIZE]) {
+  int count = 0;
+  char *token;
+  char *rest = (char *)input;
+
+  while ((token = strstr(rest, delimiter)) != NULL && count < MAX_REGIONS) {
+    *token = '\0';
+    strncpy(regions[count], rest, BUF_SIZE);
+    strcat(regions[count], "\r\n\r\n");
+    rest = token + strlen(delimiter);
+    count++;
+  }
+
+  if (count < MAX_REGIONS) {
+    strncpy(regions[count], rest, BUF_SIZE);
+    count++;
+  }
+
+  return count;
 }

@@ -69,10 +69,10 @@ void response_write(char *buf, size_t _size, ssize_t *readret,
 // ===
 void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
                    size_t _size, ssize_t *readret) {
-  char filetype[64];
-  char Data[1024];
-  char contentlength[1024];
-  char lastmodify[1024];
+  char filetype[TYPE_SIZE];
+  char Data[FIELD_SIZE];
+  char contentlength[FIELD_SIZE];
+  char lastmodify[FIELD_SIZE];
   const char *statusline = "HTTP/1.1 200 OK\r\n";
   const char *connectline = "Connection: keep-alive\r\n";
   const char *serverline = "Server: liso/1.0\r\n";
