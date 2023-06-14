@@ -16,7 +16,7 @@ typedef struct {
 typedef struct {
   char http_version[50];
   char http_method[50];
-  char http_uri[4096];
+  char http_uri[512];
   Request_header *headers;
   int header_count;
 } Request;

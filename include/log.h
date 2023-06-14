@@ -10,5 +10,5 @@ extern char *IP;
 
 void errorLOG(const char *msg);
 void accessLOG(const char *msg);
-void message(FILE *file, const char *msg, const char *log_type);
+void message(FILE *file, const char *_msg, const char *log_type);
 #endif

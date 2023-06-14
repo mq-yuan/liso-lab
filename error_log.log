@@ -1,56 +1,345 @@
-127.0.0.1 - - [Data: Mon, 29 May 2023 18:57:02 CST] Failed binding socket.
-
-[Data: Mon, 29 May 2023 18:57:02 CST] [core:error] [pid:564347] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:33:43 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:33:43 CST] [core:error] [pid:795190] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:00 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:47:00 CST] [core:error] [pid:800081] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:03 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:47:03 CST] [core:error] [pid:800111] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:47:57 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:47:57 CST] [core:error] [pid:800400] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:48:34 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:48:34 CST] [core:error] [pid:800651] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Thu, 01 Jun 2023 21:52:21 CST] Failed binding socket.
-
-[Data: Thu, 01 Jun 2023 21:52:21 CST] [core:error] [pid:801927] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Fri, 02 Jun 2023 18:53:13 CST] Failed binding socket.
-
-[Data: Fri, 02 Jun 2023 18:53:13 CST] [core:error] [pid:875120] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Fri, 09 Jun 2023 10:55:40 CST] Failed binding socket.
-
-[Data: Fri, 09 Jun 2023 10:55:40 CST] [core:error] [pid:262758] [client 127.0.0.1] Failed binding socket.
-
-127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:22:53 CST] Error reading from client socket.
-
-[Data: Tue, 13 Jun 2023 21:22:53 CST] [core:error] [pid:38248] [client 127.0.0.1] Error reading from client socket.
-
-127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:47:58 CST] Error reading from client socket.
-
-[Data: Tue, 13 Jun 2023 21:47:58 CST] [core:error] [pid:40323] [client 127.0.0.1] Error reading from client socket.
-
-127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:50:39 CST] Error reading from client socket.
-
-[Data: Tue, 13 Jun 2023 21:50:39 CST] [core:error] [pid:40772] [client 127.0.0.1] Error reading from client socket.
-
-127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:51:38 CST] Error reading from client socket.
-
-[Data: Tue, 13 Jun 2023 21:51:38 CST] [core:error] [pid:40994] [client 127.0.0.1] Error reading from client socket.
-
-127.0.0.1 - - [Data: Tue, 13 Jun 2023 21:52:46 CST] Error reading from client socket.
-
-[Data: Tue, 13 Jun 2023 21:52:46 CST] [core:error] [pid:41478] [client 127.0.0.1] Error reading from client socket.
-
+[Data: Wed, 14 Jun 2023 15:05:16 CST] [core:error] [pid:10713] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:13 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:28 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:28 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:28 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:31 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:32 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:51 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:08:59 CST] [core:error] [pid:11541] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:09:21 CST] [core:error] [pid:11872] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:12:26 CST] [core:error] [pid:12441] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:36 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:14:43 CST] [core:error] [pid:13151] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:25:05 CST] [core:error] [pid:16030] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:31:56 CST] [core:error] [pid:17016] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:31:56 CST] [core:error] [pid:17016] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:31:56 CST] [core:error] [pid:17016] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:31:56 CST] [core:error] [pid:17016] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:31:56 CST] [core:error] [pid:17016] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:36 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:46 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:46 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:46 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:49 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Wed, 14 Jun 2023 15:45:50 CST] [core:error] [pid:19658] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported

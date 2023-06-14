@@ -181,16 +181,21 @@ int main(int argc, char *argv[]) {
         }
         /* FOR POST */
         else if ((strncmp(request->http_method, "POST", 5) == 0)) {
+          char _token[LOG_BUF_SIZE];
+          sprintf(_token, " \"%s %s %s\" 200 ", request->http_method,
+                  request->http_uri, request->http_version);
+          accessLOG(_token);
+          memset(_token, 0, sizeof(_token));
         }
         /* FOR HEAD */
         else if ((strncmp(request->http_method, "HEAD", 5) == 0)) {
           response_head(fullpath, sizeof(fullpath), request, token,
-                        sizeof(token), &readret);
+                        strlen(token), &readret);
         }
         /* FOR GET */
         else if ((strncmp(request->http_method, "GET", 4) == 0)) {
           response_get(fullpath, sizeof(fullpath), request, token,
-                       sizeof(token), &readret);
+                       strlen(token), &readret);
         }
 
         /* SEND */
@@ -198,16 +203,10 @@ int main(int argc, char *argv[]) {
             (strncmp(request->http_method, "GET", 4) != 0)) {
           if (send_message(sock, client_sock, token) == 0) {
             return EXIT_FAILURE;
-          } else {
-            accessLOG("SUCCESS");
           }
         } else {
           if (handle_get_request(client_sock, fullpath, token) == 0) {
             return EXIT_FAILURE;
-          } else {
-            memset(token, 0, BUF_SIZE);
-            sprintf(token, "SUCCESS SEND %s RESPONSE", request->http_method);
-            accessLOG(token);
           }
         }
 
