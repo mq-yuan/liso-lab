@@ -1,4 +1,5 @@
 #include "utils.h"
+#include <ctype.h>
 
 void get_fullpath(char *fullpath, size_t _size, const char *uri) {
   const char *static_site_path = "./static_site";
@@ -151,4 +152,15 @@ int char_split(const char *input, const char *delimiter,
   }
 
   return count;
+}
+
+void rtrim(char *str) {
+  if (str == NULL || *str == '\0')
+    return;
+  int len = strlen(str);
+  char *p = str + len - 1;
+  while (p >= str && isspace(*p)) {
+    *p = '\0';
+    --p;
+  }
 }

@@ -20,5 +20,6 @@ int char_split(const char *input, const char *delimiter,
                char regions[MAX_REGIONS][BUF_SIZE]);
 int checkPortInUse(int port);
 void releasePort(int port);
+void rtrim(char *str);
 
 #endif

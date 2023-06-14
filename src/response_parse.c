@@ -9,7 +9,7 @@ void response_400(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
-  accessLOG(reply);
+  errorLOG(reply);
 }
 
 void response_505(char *buf, size_t _size, ssize_t *readret) {
@@ -18,7 +18,7 @@ void response_505(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
-  accessLOG(reply);
+  errorLOG(reply);
 }
 
 void response_501(char *buf, size_t _size, ssize_t *readret) {
@@ -27,7 +27,7 @@ void response_501(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
-  accessLOG(reply);
+  errorLOG(reply);
 }
 
 void response_404(char *buf, size_t _size, ssize_t *readret) {
@@ -36,7 +36,7 @@ void response_404(char *buf, size_t _size, ssize_t *readret) {
   size_t n = (_size > strlen(reply)) ? strlen(reply) : _size;
   strncpy(buf, reply, n);
   *readret = strlen(buf);
-  accessLOG(reply);
+  errorLOG(reply);
 }
 
 void response_403(char *buf, size_t _size, ssize_t *readret) {
@@ -73,6 +73,7 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
   char Data[FIELD_SIZE];
   char contentlength[FIELD_SIZE];
   char lastmodify[FIELD_SIZE];
+  char token[LOG_BUF_SIZE];
   const char *statusline = "HTTP/1.1 200 OK\r\n";
   const char *connectline = "Connection: keep-alive\r\n";
   const char *serverline = "Server: liso/1.0\r\n";
@@ -106,6 +107,9 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
 
   response_write(buf, _size, readret, statusline, connectline, serverline, Data,
                  filetype, contentlength, lastmodify);
+  sprintf(token, " \"%s %s %s\" 200 ", request->http_method, request->http_uri,
+          request->http_version);
+  accessLOG(token);
 }
 
 void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
