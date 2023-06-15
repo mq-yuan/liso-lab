@@ -162,7 +162,8 @@ int main(int argc, char *argv[]) {
 
       for (int _r = 0; _r < regions_num - 1; _r++) {
         char *token = request_regions[_r];
-        Request *request = parse(token, BUF_SIZE, client_sock);
+        size_t n = (BUF_SIZE > strlen(token)) ? strlen(token) : BUFSIZ;
+        Request *request = parse(token, n, client_sock);
         /* Generating the Response Messages for Unimplemented and Formatting
          * Errors*/
         /* For NULL */
