@@ -468,3 +468,96 @@
 [Data: Thu, 15 Jun 2023 19:28:07 CST] [core:error] [pid:82946] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
 [Data: Thu, 15 Jun 2023 19:28:07 CST] [core:error] [pid:82946] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
 [Data: Thu, 15 Jun 2023 19:28:07 CST] [core:error] [pid:82946] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:43 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:43 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:43 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:46 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:47 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:52:56 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 13:53:10 CST] [core:error] [pid:87572] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:25 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:31 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:36 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:36 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:36 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:39 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 404 Not Found
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
+[Data: Fri, 16 Jun 2023 14:00:40 CST] [core:error] [pid:89532] [client 127.0.0.1] HTTP/1.1 505 HTTP Version not supported
