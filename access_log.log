@@ -613,3 +613,17 @@
 127.0.0.1 - - [Data: Fri, 16 Jun 2023 14:00:45 CST]  "GET /style.css HTTP/1.1" 200 895243502 HTTP/1.1" 200
 127.0.0.1 - - [Data: Fri, 16 Jun 2023 14:00:45 CST]  "GET /images/liso_header.png HTTP/1.1" 200 P/1.1" 200
 127.0.0.1 - - [Data: Fri, 16 Jun 2023 14:01:47 CST]  "GET /?vscodeBrowserReqId=1686895305960 HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "HEAD / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
+127.0.0.1 - - [Data: Sun, 18 Jun 2023 15:57:52 CST]  "GET / HTTP/1.1" 200
