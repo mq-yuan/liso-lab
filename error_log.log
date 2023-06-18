@@ -576,3 +576,26 @@
 [Data: Sun, 18 Jun 2023 15:57:52 CST] [core:error] [pid:102066] [client 127.0.0.1] HTTP/1.1 501 Not Implemented
 [Data: Sun, 18 Jun 2023 15:57:52 CST] [core:error] [pid:102066] [client 127.0.0.1] HTTP/1.1 400 Bad request
 [Data: Sun, 18 Jun 2023 15:57:52 CST] [core:error] [pid:102066] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Sun, 18 Jun 2023 20:31:41 CST] [core:error] [pid:115453] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:03:56 CST] [core:error] [pid:116263] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:07:53 CST] [core:error] [pid:117322] [client 127.0.0.1] Failed closing socket.
+ÿÿÿÿÿÿÿÿ
+[Data: Sun, 18 Jun 2023 22:07:53 CST] [core:error] [pid:117322] [client 127.0.0.1] Error reading from client socket.
+ÿÿ
+[Data: Sun, 18 Jun 2023 22:23:10 CST] [core:error] [pid:121361] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:36:13 CST] [core:error] [pid:124604] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:43:58 CST] [core:error] [pid:125744] [client 127.0.0.1] Failed closing socket.
+àÃ7Sâ
+[Data: Sun, 18 Jun 2023 22:43:58 CST] [core:error] [pid:125744] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:44:20 CST] [core:error] [pid:125842] [client 127.0.0.1] Failed closing socket.
+à=u^
+[Data: Sun, 18 Jun 2023 22:44:20 CST] [core:error] [pid:125842] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:44:36 CST] [core:error] [pid:125924] [client 127.0.0.1] Failed closing socket.
+àã,ª¯
+[Data: Sun, 18 Jun 2023 22:44:36 CST] [core:error] [pid:125924] [client 127.0.0.1] Error reading from client socket.
+[Data: Sun, 18 Jun 2023 22:46:10 CST] [core:error] [pid:126292] [client 127.0.0.1] Failed closing socket.
+à£ÑÇ¡
+[Data: Sun, 18 Jun 2023 22:46:10 CST] [core:error] [pid:126292] [client 127.0.0.1] Error closing client socket.
+[Data: Sun, 18 Jun 2023 22:46:34 CST] [core:error] [pid:126422] [client 127.0.0.1] Failed closing socket.
+à³ßMf
+[Data: Sun, 18 Jun 2023 22:46:34 CST] [core:error] [pid:126422] [client 127.0.0.1] Error closing client socket.
