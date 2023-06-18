@@ -94,7 +94,6 @@ int main(int argc, char *argv[]) {
   char fullpath[BUF_SIZE];
   char request_regions[MAX_REGIONS][BUF_SIZE];
   ssize_t base;
-  int flag;
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);
@@ -161,9 +160,8 @@ int main(int argc, char *argv[]) {
       int regions_num = char_split(buf, "\r\n\r\n", request_regions);
 
       /* mark whether last region is completed */
-      flag = 0;
 
-      for (int _r = 0; _r <= regions_num - 1; _r++) {
+      for (int _r = 0; _r < regions_num - 1; _r++) {
         char *token = request_regions[_r];
         /* Parse */
         size_t n = (BUF_SIZE > strlen(token)) ? strlen(token) : BUFSIZ;
@@ -173,15 +171,7 @@ int main(int argc, char *argv[]) {
          * Errors*/
         /* For NULL */
         if (request == NULL) {
-          if (_r == regions_num - 1) {
-            /* if the last region is not completed, set flag == 1
-             * if the lset region is completed, continue handle */
-            flag = 1;
-            memset(token, 0, BUF_SIZE);
-            break;
-          } else {
-            response_400(token, strlen(token), &readret);
-          }
+          response_400(token, strlen(token), &readret);
         }
         /* For HTTP VERSION */
         else if (strncmp(request->http_version, "HTTP/1.1", 9) != 0) {
@@ -236,15 +226,8 @@ int main(int argc, char *argv[]) {
 
       memset(buf, 0, BUF_SIZE);
 
-      if (flag == 1) {
-        /* if the last region is not completed, move it to the front of buf
-         * and set base*/
-        strcat(buf, request_regions[regions_num - 1]);
-        base = strlen(buf);
-      } else {
-        /* if the last region is completed, set base is 0 */
-        base = 0;
-      }
+      strcat(buf, request_regions[regions_num - 1]);
+      base = strlen(buf);
     }
 
     /* ERROR Reading */
