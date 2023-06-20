@@ -179,15 +179,6 @@ int main(int argc, char *argv[]) {
         continue;
     }
 
-    /* cli_size = sizeof(cli_addr); */
-    /* if ((client_sock = */
-    /*          accept(sock, (struct sockaddr *)&cli_addr, &cli_size)) == -1) {
-     */
-    /*   close(sock); */
-    /*   fprintf(stderr, "Error accepting connection.\n"); */
-    /*   errorLOG("Error accepting connection.\r\n"); */
-    /*   return EXIT_FAILURE; */
-    /* } */
     for (int i = sock + 1; i <= max_fd; i++) {
       if (FD_ISSET(i, &readfds)) {
 
@@ -269,7 +260,8 @@ int main(int argc, char *argv[]) {
 
           strcat(buf, request_regions[regions_num - 1]);
           base = strlen(buf);
-          break;
+          if (base == 0)
+            break;
         }
 
         /* ERROR Reading */
