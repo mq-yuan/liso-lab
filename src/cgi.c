@@ -1,4 +1,5 @@
 #include "cgi.h"
+#include <stdlib.h>
 
 CGI_param *build_cgi_param(Request *request, const char *fullpath,
                            host_and_port hap) {
@@ -133,6 +134,9 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
 
   if (executor->pid > 0) {
     int readret;
+    int status;
+    waitpid(executor->pid, &status, 0);
+
     close(executor->stdout_pipe[1]);
     close(executor->stdin_pipe[0]);
     close(executor->stdin_pipe[1]); /* finished writing to spawn */
@@ -142,6 +146,11 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
 
     close(executor->stdout_pipe[0]);
     close(executor->stdin_pipe[1]);
+
+    if (!WIFEXITED(status) || WEXITSTATUS(status) != 0) {
+      memset(buf, 0, BUF_SIZE);
+      strcat(buf, "");
+    }
 
     if (readret == 0) {
       return EXIT_SUCCESS;

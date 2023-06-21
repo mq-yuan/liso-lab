@@ -3,6 +3,8 @@
 #include "parse.h"
 #include "utils.h"
 #include <errno.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 typedef struct CGI_param {
   char *filename;

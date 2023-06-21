@@ -674,3 +674,4 @@
 [Data: Wed, 21 Jun 2023 21:10:05 CST] [core:error] [pid:207061] [client 127.0.0.1] HTTP/1.1 404 Not Found
 
 ÿÿÿÿÿÿ
+[Data: Wed, 21 Jun 2023 22:15:04 CST] [core:error] [pid:223148] [client 127.0.0.1] HTTP/1.1 500 Internal Server Error

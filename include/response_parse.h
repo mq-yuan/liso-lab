@@ -18,6 +18,7 @@ void response_403(char *buf, size_t _size, ssize_t *readret);
 void response_404(char *buf, size_t _size, ssize_t *readret);
 void response_505(char *buf, size_t _size, ssize_t *readret);
 void response_501(char *buf, size_t _size, ssize_t *readret);
+void response_500(char *buf, size_t _size, ssize_t *readret);
 void response_write(char *buf, size_t _size, ssize_t *readret,
                     const char *statusline, const char *connectline,
                     const char *serverline, const char *Data,
