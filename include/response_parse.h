@@ -1,5 +1,6 @@
 #ifndef RESPONSE_PARSE_H
 #define RESPONSE_PARSE_H
+#include "cgi.h"
 #include "constants.h"
 #include "log.h"
 #include "parse.h"
@@ -24,7 +25,7 @@ void response_write(char *buf, size_t _size, ssize_t *readret,
                     const char *lastmodify);
 
 void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
-                   size_t _size, ssize_t *readret);
+                   size_t _size, ssize_t *readret, const host_and_port *hap);
 void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
-                  size_t _size, ssize_t *readret);
+                  size_t _size, ssize_t *readret, const host_and_port *hap);
 #endif

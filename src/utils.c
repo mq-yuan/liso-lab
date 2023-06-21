@@ -1,5 +1,6 @@
 #include "utils.h"
 #include <ctype.h>
+#include <stdlib.h>
 
 void get_fullpath(char *fullpath, size_t _size, const char *uri) {
   const char *static_site_path = "./static_site";
@@ -18,7 +19,7 @@ void get_fullpath(char *fullpath, size_t _size, const char *uri) {
   }
 }
 
-int is_dir(char *fullpath) {
+int is_dir(const char *fullpath) {
   struct stat st;
   if (stat(fullpath, &st) == 0) {
     if (S_ISDIR(st.st_mode)) {
@@ -28,7 +29,7 @@ int is_dir(char *fullpath) {
   return 0;
 }
 
-int check_file(char *fullpath) {
+int check_file(const char *fullpath) {
   struct stat st;
   if (stat(fullpath, &st) == 0) {
     if (S_ISREG(st.st_mode)) {
@@ -41,12 +42,12 @@ int check_file(char *fullpath) {
   }
 }
 
-void parse_type(char *fullpath, char *filetype) {
+http_process_result parse_type(const char *fullpath, char *filetype) {
   const char *dot = strrchr(fullpath, '.');
   strcpy(filetype, "Content-type: ");
-  if (dot == NULL) {
+  if (dot == NULL || strncmp(dot + 1, "cgi", 4) == 0) {
     strcat(filetype, "\r\n");
-    return;
+    return CGI;
   }
   if (strncmp(dot + 1, "html", 5) == 0) {
     strcat(filetype, "text/html\r\n");
@@ -61,9 +62,10 @@ void parse_type(char *fullpath, char *filetype) {
   } else {
     strcat(filetype, "application/octet-stream\r\n");
   }
+  return STATIC;
 }
 
-void content_length(char *contentlength, char *fullpath) {
+void content_length(char *contentlength, const char *fullpath) {
   struct stat st;
   long length;
   if (stat(fullpath, &st) == 0) {
@@ -82,7 +84,7 @@ void data_now(char *Data, size_t _size) {
   strftime(Data, _size, "Data: %a, %d %b %Y %H:%M:%S %Z", localTime);
 }
 
-void data_modify(char *lastmodify, size_t _size, char *fullpath) {
+void data_modify(char *lastmodify, size_t _size, const char *fullpath) {
   struct stat st;
   struct tm *modifyTime;
   if (stat(fullpath, &st) == 0) {
@@ -141,7 +143,7 @@ int char_split(const char *input, const char *delimiter,
   while ((token = strstr(rest, delimiter)) != NULL && count < MAX_REGIONS) {
     *token = '\0';
     strncpy(regions[count], rest, BUF_SIZE);
-    strcat(regions[count], "\r\n\r\n");
+    strcat(regions[count], delimiter);
     rest = token + strlen(delimiter);
     count++;
   }
@@ -163,4 +165,30 @@ void rtrim(char *str) {
     *p = '\0';
     --p;
   }
+}
+
+char *newstring(const char *str) {
+  char *buf = (char *)malloc(strlen(str) + 1);
+  strcpy(buf, str);
+  return buf;
+}
+
+char *get_header_value(Request *request, const char *header) {
+  int i;
+  for (i = 0; i < request->header_count; i++) {
+    if (!strcmp(request->headers[i].header_name, header)) {
+      return request->headers[i].header_value;
+    }
+  }
+  return "";
+}
+
+host_and_port *get_hap(const struct sockaddr_in cli_addr) {
+  host_and_port *hap = (host_and_port *)malloc(sizeof(host_and_port));
+  char remoteIP[INET6_ADDRSTRLEN];
+  inet_ntop(cli_addr.sin_family, &cli_addr.sin_addr, remoteIP,
+            INET6_ADDRSTRLEN);
+  hap->host = newstring(remoteIP);
+  hap->port = cli_addr.sin_port;
+  return hap;
 }

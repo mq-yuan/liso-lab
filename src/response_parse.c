@@ -1,4 +1,5 @@
 #include "response_parse.h"
+#include <string.h>
 
 // ===
 // === ERROR RESPONSE
@@ -68,7 +69,7 @@ void response_write(char *buf, size_t _size, ssize_t *readret,
 // === HEAD && GET
 // ===
 void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
-                   size_t _size, ssize_t *readret) {
+                   size_t _size, ssize_t *readret, const host_and_port *hap) {
   char filetype[TYPE_SIZE];
   char Data[FIELD_SIZE];
   char contentlength[FIELD_SIZE];
@@ -96,23 +97,39 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
   default:
     break;
   }
-  parse_type(fullpath, filetype);
-  content_length(contentlength, fullpath);
-
   /* parse now time && last modify time */
   data_now(Data, sizeof(Data));
   strcat(Data, "\r\n");
   data_modify(lastmodify, sizeof(lastmodify), fullpath);
   strcat(lastmodify, "\r\n");
-
-  response_write(buf, _size, readret, statusline, connectline, serverline, Data,
-                 filetype, contentlength, lastmodify);
+  content_length(contentlength, fullpath);
+  if (parse_type(fullpath, filetype) == STATIC) {
+    content_length(contentlength, fullpath);
+    response_write(buf, _size, readret, statusline, connectline, serverline,
+                   Data, filetype, contentlength, lastmodify);
+  } else {
+    char cgi_result[BUF_SIZE];
+    char split_regions[MAX_REGIONS][BUF_SIZE];
+    memset(cgi_result, 0, BUF_SIZE);
+    CGI_param *cgi_param = build_cgi_param(request, fullpath, *hap);
+    handle_cgi(cgi_param, cgi_result);
+    int regions_num = char_split(cgi_result, "\r\n", split_regions);
+    memset(filetype, 0, TYPE_SIZE);
+    strcat(filetype, split_regions[0]);
+    memset(contentlength, 0, TYPE_SIZE);
+    strcat(contentlength, split_regions[1]);
+    response_write(buf, _size, readret, statusline, connectline, serverline,
+                   Data, filetype, contentlength, lastmodify);
+    for (int i = 2; i < regions_num; i++) {
+      strcat(buf, split_regions[i]);
+    }
+  }
   sprintf(token, " \"%s %s %s\" 200 ", request->http_method, request->http_uri,
           request->http_version);
   accessLOG(token);
 }
 
 void response_get(char *fullpath, size_t f_size, Request *request, char *buf,
-                  size_t _size, ssize_t *readret) {
-  response_head(fullpath, f_size, request, buf, _size, readret);
+                  size_t _size, ssize_t *readret, const host_and_port *hap) {
+  response_head(fullpath, f_size, request, buf, _size, readret, hap);
 }

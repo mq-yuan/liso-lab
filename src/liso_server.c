@@ -67,7 +67,9 @@ int send_message_bit(int sock, int client_sock, const char *buf,
 
 int handle_get_request(int client_sock, const char *filename, char *buf) {
   const char *status = "HTTP/1.1 200 OK\r\n";
-  if (strncmp(buf, status, strlen(status)) != 0) {
+  char filetype[TYPE_SIZE];
+  if (strncmp(buf, status, strlen(status)) != 0 ||
+      parse_type(filename, filetype) == CGI) {
     send_message(sock, client_sock, buf);
     return 1;
   }
@@ -99,6 +101,7 @@ int main(int argc, char *argv[]) {
   int max_fd;
   int activity;
   fd_set readfds;
+  host_and_port *hap = NULL;
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);
@@ -185,6 +188,7 @@ int main(int argc, char *argv[]) {
         readret = 0;
         base = 0;
         client_sock = i;
+        hap = get_hap(addr[client_sock]);
 
         while ((readret = recv(client_sock, buf + base, BUF_SIZE - base, 0)) >=
                1) {
@@ -226,12 +230,12 @@ int main(int argc, char *argv[]) {
             /* FOR HEAD */
             else if ((strncmp(request->http_method, "HEAD", 5) == 0)) {
               response_head(fullpath, sizeof(fullpath), request, token,
-                            strlen(token), &readret);
+                            strlen(token), &readret, hap);
             }
             /* FOR GET */
             else if ((strncmp(request->http_method, "GET", 4) == 0)) {
               response_get(fullpath, sizeof(fullpath), request, token,
-                           strlen(token), &readret);
+                           strlen(token), &readret, hap);
             }
 
             /* SEND */
