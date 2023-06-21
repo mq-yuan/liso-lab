@@ -8,5 +8,8 @@
 #define FIELD_SIZE 1024
 #define LOG_BUF_SIZE 1024
 #define LOG_SIZE 4096
+#define CGI_ARGS_LEN 2
+#define CGI_ENVP_LEN 22
+#define CGI_ENVP_INFO_MAXLEN 1024
 
 #endif
