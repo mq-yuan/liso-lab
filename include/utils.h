@@ -34,5 +34,6 @@ void rtrim(char *str);
 char *newstring(const char *str);
 char *get_header_value(Request *request, const char *header);
 host_and_port *get_hap(const struct sockaddr_in cli_addr);
+void make_easy_html(char *result, const char *content);
 
 #endif

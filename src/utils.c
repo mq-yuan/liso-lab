@@ -1,5 +1,6 @@
 #include "utils.h"
 #include <ctype.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void get_fullpath(char *fullpath, size_t _size, const char *uri) {
@@ -191,4 +192,12 @@ host_and_port *get_hap(const struct sockaddr_in cli_addr) {
   hap->host = newstring(remoteIP);
   hap->port = cli_addr.sin_port;
   return hap;
+}
+
+void make_easy_html(char *result, const char *content) {
+  sprintf(result,
+          "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    "
+          "<title>%s</title>\r\n</head>\r\n<body>\r\n    <h1>%s</h1>\r\n    "
+          "</body>\r\n</html>",
+          content, content);
 }

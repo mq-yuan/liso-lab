@@ -675,3 +675,7 @@
 
 ÿÿÿÿÿÿ
 [Data: Wed, 21 Jun 2023 22:15:04 CST] [core:error] [pid:223148] [client 127.0.0.1] HTTP/1.1 500 Internal Server Error
+[Data: Wed, 21 Jun 2023 22:41:10 CST] [core:error] [pid:228758] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 21 Jun 2023 22:45:51 CST] [core:error] [pid:229578] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 21 Jun 2023 22:47:44 CST] [core:error] [pid:230299] [client 127.0.0.1] HTTP/1.1 400 Bad request
+[Data: Wed, 21 Jun 2023 22:48:25 CST] [core:error] [pid:230639] [client 127.0.0.1] HTTP/1.1 500 Internal Server Error

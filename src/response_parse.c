@@ -1,4 +1,5 @@
 #include "response_parse.h"
+#include <stdio.h>
 #include <string.h>
 
 // ===
@@ -97,7 +98,6 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
   case -1:
     memset(fullpath, 0, f_size);
     response_404(buf, _size, readret);
-    /* strncpy(fullpath, "", strlen("")); */
     return;
   case 0:
     memset(fullpath, 0, f_size);
@@ -121,13 +121,13 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
     char cgi_result[BUF_SIZE];
     char split_regions[MAX_REGIONS][BUF_SIZE];
     memset(cgi_result, 0, BUF_SIZE);
+    memset(filetype, 0, TYPE_SIZE);
+    memset(contentlength, 0, TYPE_SIZE);
     CGI_param *cgi_param = build_cgi_param(request, fullpath, *hap);
     handle_cgi(cgi_param, cgi_result);
     int regions_num = char_split(cgi_result, "\r\n", split_regions);
     if (regions_num > 2) {
-      memset(filetype, 0, TYPE_SIZE);
       strcat(filetype, split_regions[0]);
-      memset(contentlength, 0, TYPE_SIZE);
       strcat(contentlength, split_regions[1]);
       response_write(buf, _size, readret, statusline, connectline, serverline,
                      Data, filetype, contentlength, lastmodify);
@@ -137,6 +137,15 @@ void response_head(char *fullpath, size_t f_size, Request *request, char *buf,
     } else {
       flag = 1;
       response_500(buf, _size, readret);
+      strcat(filetype, "Content-type: text/html\r\n");
+      make_easy_html(split_regions[0], "500 Internal Server Error");
+      sprintf(split_regions[1], "Content-length: %lu\r\n",
+              strlen(split_regions[0]));
+      strcat(contentlength, split_regions[1]);
+      response_write(buf, _size, readret,
+                     "HTTP/1.1 500 Internal Server Error\r\n", "", "", "",
+                     filetype, contentlength, "");
+      strcat(buf, split_regions[0]);
     }
     free_CGI_param(cgi_param);
   }
