@@ -36,6 +36,7 @@ CGI_param *build_cgi_param(Request *request, const char *fullpath,
     query_string = "";
   }
   set_envp_field_by_str("QUERY_STRING", query_string, param, index++);
+  free(query_string);
 
   /* envp taken from request */
   set_envp_field_by_header(request, "Content-Length", "CONTENT_LENGTH", param,
@@ -63,10 +64,14 @@ CGI_param *build_cgi_param(Request *request, const char *fullpath,
 }
 
 void free_CGI_param(CGI_param *param) {
-  int i = 0;
-  while (param->envp[i] != NULL) {
+  for (int i = 0; param->envp[i] != NULL; i++) {
     free(param->envp[i]);
-    i++;
+  }
+  for (int i = 0; param->args[i] != NULL; i++) {
+    free(param->args[i]);
+  }
+  if (param->filename != NULL) {
+    free(param->filename);
   }
   free(param);
 }
@@ -97,11 +102,15 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
   /* 0 can be read from, 1 can be written to */
   if (pipe(executor->stdin_pipe) < 0) {
     fprintf(stderr, "Error piping for stdin.\n");
+    if (executor != NULL)
+      free(executor);
     return EXIT_FAILURE;
   }
 
   if (pipe(executor->stdout_pipe) < 0) {
     fprintf(stderr, "Error piping for stdout.\n");
+    if (executor != NULL)
+      free(executor);
     return EXIT_FAILURE;
   }
   /*************** END PIPE **************/
@@ -111,6 +120,8 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
   /* not good */
   if (executor->pid < 0) {
     fprintf(stderr, "Something really bad happened when fork()ing.\n");
+    if (executor != NULL)
+      free(executor);
     return EXIT_FAILURE;
   }
 
@@ -127,6 +138,8 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
     if (execve(cgi_param->filename, cgi_param->args, cgi_param->envp)) {
       execve_error_handler();
       fprintf(stderr, "Error executing execve syscall.\n");
+      if (executor != NULL)
+        free(executor);
       return EXIT_FAILURE;
     }
     /*************** END EXECVE ****************/
@@ -153,9 +166,13 @@ int handle_cgi(CGI_param *cgi_param, char *buf) {
     }
 
     if (readret == 0) {
+      if (executor != NULL)
+        free(executor);
       return EXIT_SUCCESS;
     }
   }
+  if (executor != NULL)
+    free(executor);
   return 1;
 }
 

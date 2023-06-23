@@ -7,6 +7,7 @@ void messageLOG(FILE *file, const char *_msg, const char *log_type) {
   char date_time[FIELD_SIZE];
   char message[LOG_SIZE];
   char msg[LOG_BUF_SIZE];
+  memset(msg, 0, LOG_BUF_SIZE);
   size_t n = (LOG_BUF_SIZE > strlen(_msg)) ? strlen(_msg) : LOG_BUF_SIZE;
   strncpy(msg, _msg, n);
   data_now(date_time, FIELD_SIZE);

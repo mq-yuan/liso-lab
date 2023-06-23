@@ -79,12 +79,14 @@ int handle_get_request(int client_sock, const char *filename, char *buf) {
   while ((_readret = fread(buf + readret, 1, BUF_SIZE - readret, file)) &&
          (_readret > 0)) {
     if (send_message_bit(sock, client_sock, buf, readret + _readret) == 0) {
+      fclose(file);
       return 0;
     }
     /* clear the buf */
     memset(buf, 0, readret + _readret);
     readret = 0; // clear the response head
   }
+  fclose(file);
   return 1;
 }
 
@@ -102,6 +104,7 @@ int main(int argc, char *argv[]) {
   int activity;
   fd_set readfds;
   host_and_port *hap = NULL;
+  memset(fullpath, 0, BUF_SIZE);
 
   if (argc == 2) {
     echo_port = atoi(argv[1]);
@@ -266,6 +269,10 @@ int main(int argc, char *argv[]) {
           base = strlen(buf);
           if (base == 0)
             break;
+        }
+        if (hap != NULL) {
+          free(hap->host);
+          free(hap);
         }
 
         /* ERROR Reading */
