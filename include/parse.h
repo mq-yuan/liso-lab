@@ -27,4 +27,5 @@ Request *parse(char *buffer, int size, int socketFd);
 int yyparse();
 void set_parsing_options(char *buf, size_t i, Request *request);
 void yyrestart(FILE *);
+int yylex_destroy(void);
 #endif

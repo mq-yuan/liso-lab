@@ -53,8 +53,10 @@ Request *parse(char *buffer, int size, int socketFd) {
     yyrestart(NULL);
 
     if (yyparse() == SUCCESS) {
+      yylex_destroy();
       return request;
     }
+    yylex_destroy();
   }
   // TODO Handle Malformed Requests
   printf("Parsing Failed\n");
